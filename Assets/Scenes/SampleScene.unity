@@ -426,6 +426,7 @@ GameObject:
   - component: {fileID: 917955811}
   - component: {fileID: 917955810}
   - component: {fileID: 917955812}
+  - component: {fileID: 917955813}
   m_Layer: 0
   m_Name: _GameManager
   m_TagString: Untagged
@@ -487,6 +488,20 @@ MonoBehaviour:
   - {fileID: 3398196857506778724, guid: 9d9b9a4820a72e84c9f24911618a02f7, type: 3}
   - {fileID: 5291437818912269135, guid: 4c300a533710e9d438008c2181db8730, type: 3}
   stageImage: {fileID: 1381308511}
+--- !u!114 &917955813
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 917955809}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4dbf9582e12c0047809b9ea72090485, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  autoClickersLastTime: []
+  autoClickerPrice: 1
 --- !u!1 &947184263
 GameObject:
   m_ObjectHideFlags: 0
@@ -500,7 +515,7 @@ GameObject:
   - component: {fileID: 947184266}
   - component: {fileID: 947184265}
   m_Layer: 5
-  m_Name: Button
+  m_Name: BuyAutoClickButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -569,7 +584,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 947184266}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 917955813}
+        m_TargetAssemblyTypeName: ClickManager, Assembly-CSharp
+        m_MethodName: OnBuyAutoClicker
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &947184266
 MonoBehaviour:
   m_ObjectHideFlags: 0
