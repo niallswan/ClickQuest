@@ -22,6 +22,7 @@ public class Enemy : MonoBehaviour
 
     public void Defeated()
     {
+        GameManager.instance.AddGold(goldToGive);
         EnemyManager.instance.DefeatEnemy(gameObject);
     }
 }
