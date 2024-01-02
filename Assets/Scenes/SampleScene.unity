@@ -480,6 +480,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gold: 0
   goldText: {fileID: 1209848036}
+  stages:
+  - {fileID: 7107687931089781869, guid: 409d4040fc845004b8859056e8de98ec, type: 3}
+  - {fileID: -7377295934022830490, guid: e8eb313ad7c3fa34f8d04adc4fced60c, type: 3}
+  - {fileID: 1336809692955082325, guid: 7399383b5a1d3bb4282a0cab301503a6, type: 3}
+  - {fileID: 3398196857506778724, guid: 9d9b9a4820a72e84c9f24911618a02f7, type: 3}
+  - {fileID: 5291437818912269135, guid: 4c300a533710e9d438008c2181db8730, type: 3}
+  stageImage: {fileID: 1381308511}
 --- !u!1 &947184263
 GameObject:
   m_ObjectHideFlags: 0
