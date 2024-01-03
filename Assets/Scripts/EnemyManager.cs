@@ -15,6 +15,11 @@ public class EnemyManager : MonoBehaviour
         instance = this;
     }
 
+    void Start()
+    {
+        CreateNewEnemy();
+    }
+
     public void CreateNewEnemy()
     {
         GameObject enemyToSpawn = enemyPrefabs[Random.Range(0, enemyPrefabs.Length)];

@@ -20,6 +20,8 @@ public class Enemy : MonoBehaviour
             currentHP--;
             healthBarFill.fillAmount = (float)currentHP / (float)maxHP;
 
+            DamageNumberController.instance.SpawnDamage(1);
+
             if(currentHP <= 0){   
                 animator.SetBool("IsDead", true);           
                 Invoke("Defeated", 0.5f);
