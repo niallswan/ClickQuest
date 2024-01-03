@@ -14,7 +14,7 @@ public class ClickManager : MonoBehaviour
         for(int i = 0; i < autoClickersLastTime.Count; i++){
             if(Time.time - autoClickersLastTime[i] >= 1.0f){
                 autoClickersLastTime[i] = Time.time;
-                EnemyManager.instance.currentEnemy.Damage();
+                EnemyManager.instance.currentEnemy.Damage(false);
             }
         }
     }

@@ -13,6 +13,7 @@ public class GameManager : MonoBehaviour
     private int currentStage;
     private int enemiesUntilStageChange;
     public Image stageImage;
+    public Animator weaponAnimator;
 
     public static GameManager instance;
 
@@ -32,6 +33,11 @@ public class GameManager : MonoBehaviour
     {
         gold -= amount;
         goldText.text = ": " + gold.ToString();        
+    }
+
+    public void SwingWeapon()
+    {
+        weaponAnimator.SetTrigger("Swing");
     }
 
     public void StageCheck()

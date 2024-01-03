@@ -13,9 +13,12 @@ public class Enemy : MonoBehaviour
 
     private bool alive = true;
 
-    public void Damage()
+    public void Damage(bool input)
     {
         if(alive){
+            if(input){
+                GameManager.instance.SwingWeapon();
+            }  
             animator.SetTrigger("Damaged");
             currentHP--;
             healthBarFill.fillAmount = (float)currentHP / (float)maxHP;
