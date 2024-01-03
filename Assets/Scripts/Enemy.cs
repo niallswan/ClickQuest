@@ -34,5 +34,6 @@ public class Enemy : MonoBehaviour
     {
         GameManager.instance.AddGold(goldToGive);
         EnemyManager.instance.DefeatEnemy(gameObject);
+        CoinController.instance.SpawnCoin();
     }
 }

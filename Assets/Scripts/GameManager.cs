@@ -25,13 +25,13 @@ public class GameManager : MonoBehaviour
     public void AddGold(int amount)
     {
         gold += amount;
-        goldText.text = "Gold: " + gold.ToString();
+        goldText.text = ": " + gold.ToString();
     }
 
     public void SpendGold(int amount)
     {
         gold -= amount;
-        goldText.text = "Gold: " + gold.ToString();        
+        goldText.text = ": " + gold.ToString();        
     }
 
     public void StageCheck()
