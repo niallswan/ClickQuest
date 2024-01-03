@@ -9,6 +9,7 @@ public class Enemy : MonoBehaviour
     public int currentHP;
     public int maxHP;
     public int goldToGive;
+    public int expToGive = 1;
     public Animator animator;
 
     private bool alive = true;
@@ -38,5 +39,6 @@ public class Enemy : MonoBehaviour
         GameManager.instance.AddGold(goldToGive);
         EnemyManager.instance.DefeatEnemy(gameObject);
         CoinController.instance.SpawnCoin();
+        ExpLevelController.instance.SpawnExp(expToGive);
     }
 }
