@@ -130,6 +130,7 @@ MonoBehaviour:
   currentHP: 10
   maxHP: 10
   goldToGive: 1
+  animator: {fileID: 8612946366408489179}
 --- !u!1 &3991986730286277927
 GameObject:
   m_ObjectHideFlags: 0
@@ -217,6 +218,7 @@ GameObject:
   - component: {fileID: 4322916772841667822}
   - component: {fileID: 3103235462648786928}
   - component: {fileID: 7352441407031699426}
+  - component: {fileID: 8612946366408489179}
   m_Layer: 5
   m_Name: EnemyButton
   m_TagString: Untagged
@@ -337,3 +339,25 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!95 &8612946366408489179
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6291900122284059644}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: e5c063edc0519794597120ad075ae8b8, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0

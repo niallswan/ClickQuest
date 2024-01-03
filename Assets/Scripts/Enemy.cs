@@ -9,15 +9,23 @@ public class Enemy : MonoBehaviour
     public int currentHP;
     public int maxHP;
     public int goldToGive;
+    public Animator animator;
+
+    private bool alive = true;
 
     public void Damage()
     {
-        currentHP--;
-        healthBarFill.fillAmount = (float)currentHP / (float)maxHP;
+        if(alive){
+            animator.SetTrigger("Damaged");
+            currentHP--;
+            healthBarFill.fillAmount = (float)currentHP / (float)maxHP;
 
-        if(currentHP <= 0){
-            Defeated();
-        }
+            if(currentHP <= 0){   
+                animator.SetBool("IsDead", true);           
+                Invoke("Defeated", 0.5f);
+                alive = false;
+            }
+        }       
     }
 
     public void Defeated()
