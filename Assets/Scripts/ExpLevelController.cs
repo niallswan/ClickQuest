@@ -15,8 +15,6 @@ public class ExpLevelController : MonoBehaviour
     public ExpDrop expDropToSpawn;
     private List<ExpDrop> expDropPool = new List<ExpDrop>();
 
-    public Transform expDropCanvas;
-
     public List<int> expLevels;
     public int currentLevel = 1, levelCount = 100;
 
@@ -77,7 +75,7 @@ public class ExpLevelController : MonoBehaviour
         ExpDrop expDropToOutput = null;
 
         if(expDropPool.Count == 0){
-            expDropToOutput = Instantiate(expDropToSpawn, expDropCanvas);
+            expDropToOutput = Instantiate(expDropToSpawn, Vector3.zero, Quaternion.identity);
         }else{
             expDropToOutput = expDropPool[0];
             expDropPool.RemoveAt(0);

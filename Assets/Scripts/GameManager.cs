@@ -9,10 +9,16 @@ public class GameManager : MonoBehaviour
     public int gold;
     public TextMeshProUGUI goldText;
 
-    public Sprite[] stages;
+    public TextMeshProUGUI zoneStageText;
+    public TextMeshProUGUI killsToNextStageText;
+
+    public Sprite[] zones;
     private int currentStage;
+    private int currentZone;
     private int enemiesUntilStageChange;
-    public Image stageImage;
+
+    private int stagesUntilZoneChange;
+    public Image zoneImage;
     public Animator weaponAnimator;
 
     public static GameManager instance;
@@ -20,7 +26,12 @@ public class GameManager : MonoBehaviour
     void Awake()
     {
         instance = this;
-        enemiesUntilStageChange = 5;
+        enemiesUntilStageChange = 10;
+        stagesUntilZoneChange = 10;
+        currentStage = 1;
+        currentZone = 0;
+        killsToNextStageText.text = "0/10";
+        zoneStageText.text = "Zone: " + (currentZone + 1).ToString() + ", Stage: " + currentStage.ToString();
     }
 
     public void AddGold(int amount)
@@ -43,16 +54,25 @@ public class GameManager : MonoBehaviour
     public void StageCheck()
     {
         enemiesUntilStageChange--;
+        var remaining = enemiesUntilStageChange - 10;
+
+        killsToNextStageText.text = (-remaining).ToString() + "/10";
+        zoneStageText.text = "Zone: " + (currentZone + 1).ToString() + ", Stage: " + currentStage.ToString();
 
         if(enemiesUntilStageChange == 0){
-            enemiesUntilStageChange = 5;
+            enemiesUntilStageChange = 10;
             currentStage++;
 
-            if(currentStage == stages.Length){
-                currentStage = 0;
+            if(currentStage > 10){
+                currentStage = 1;
+                currentZone++;
             }
 
-            stageImage.sprite = stages[currentStage];
+            zoneImage.sprite = zones[currentZone];
+            killsToNextStageText.text = "0/10";
+            zoneStageText.text = "Zone: " + (currentZone + 1).ToString() + ", Stage: " + currentStage.ToString();
         }
+
+        
     }
 }

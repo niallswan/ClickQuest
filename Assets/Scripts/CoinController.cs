@@ -12,7 +12,6 @@ public class CoinController : MonoBehaviour
     }
 
     public Coin coinToSpawn;
-    public Transform coinCanvas;
 
     private Rigidbody2D RB;
     
@@ -26,7 +25,8 @@ public class CoinController : MonoBehaviour
         newCoin.gameObject.SetActive(true);
         RB = newCoin.GetComponent<Rigidbody2D>();
 
-        newCoin.transform.position = new Vector3(Random.Range(-1f, 1f), Random.Range(-1f, 1f), 0f);
+        newCoin.transform.position = new Vector2(Random.Range(-1f, 1f), Random.Range(-1f, 1f));
+        newCoin.transform.localScale = new Vector3(1,1,1);
         RB.velocity = new Vector2(Random.Range(-5f, 5f), 5f);
     }
 
@@ -35,7 +35,7 @@ public class CoinController : MonoBehaviour
         Coin coinToOutput = null;
 
         if(coinPool.Count == 0){
-            coinToOutput = Instantiate(coinToSpawn, coinCanvas);
+            coinToOutput = Instantiate(coinToSpawn, Vector3.zero, Quaternion.identity);
         }else{
             coinToOutput = coinPool[0];
             coinPool.RemoveAt(0);

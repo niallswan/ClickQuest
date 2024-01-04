@@ -28,7 +28,7 @@ public class DamageNumberController : MonoBehaviour
         newDamage.Setup(damageAmount);
         newDamage.gameObject.SetActive(true);
 
-        newDamage.transform.position = new Vector3(Random.Range(0f, 3f), Random.Range(-1f, 1f), 0f);
+        newDamage.transform.position = new Vector3(Random.Range(0f, 2.5f), Random.Range(-1f, 1f), 0f);
     }
 
     public DamageNumber GetFromPool()
