@@ -8,6 +8,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1033518556043287034, guid: acca3c7f07f143e4085403c2d9caf8f9, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 281.9323
+      objectReference: {fileID: 0}
+    - target: {fileID: 1033518556043287034, guid: acca3c7f07f143e4085403c2d9caf8f9, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 247.1304
+      objectReference: {fileID: 0}
+    - target: {fileID: 1033518556043287034, guid: acca3c7f07f143e4085403c2d9caf8f9, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0.000025272
+      objectReference: {fileID: 0}
+    - target: {fileID: 1033518556043287034, guid: acca3c7f07f143e4085403c2d9caf8f9, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -0.0000076294
+      objectReference: {fileID: 0}
     - target: {fileID: 6267759274696176662, guid: acca3c7f07f143e4085403c2d9caf8f9, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -90,7 +106,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7036547880507974325, guid: acca3c7f07f143e4085403c2d9caf8f9, type: 3}
       propertyPath: m_Name
-      value: Enemy_0 Variant
+      value: Enemy_2
       objectReference: {fileID: 0}
     - target: {fileID: 9118911336566454585, guid: acca3c7f07f143e4085403c2d9caf8f9, type: 3}
       propertyPath: m_Sprite

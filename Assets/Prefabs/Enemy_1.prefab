@@ -94,7 +94,23 @@ PrefabInstance:
       objectReference: {fileID: -6030333066402493403, guid: a9aa9f20dcdec4d47bd47eeeac225d92, type: 3}
     - target: {fileID: 3763565328420091004, guid: 469794008ae08d44d8dd0607c47b678f, type: 3}
       propertyPath: m_Name
-      value: Enemy_0 Variant
+      value: Enemy_1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6614593900663017267, guid: 469794008ae08d44d8dd0607c47b678f, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 299.59
+      objectReference: {fileID: 0}
+    - target: {fileID: 6614593900663017267, guid: 469794008ae08d44d8dd0607c47b678f, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 218.3714
+      objectReference: {fileID: 0}
+    - target: {fileID: 6614593900663017267, guid: 469794008ae08d44d8dd0607c47b678f, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0.205
+      objectReference: {fileID: 0}
+    - target: {fileID: 6614593900663017267, guid: 469794008ae08d44d8dd0607c47b678f, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -0.000026703
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
