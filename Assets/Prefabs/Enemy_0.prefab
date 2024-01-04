@@ -131,6 +131,8 @@ MonoBehaviour:
   maxHP: 10
   goldToGive: 1
   expToGive: 1
+  expToDrop: 1
+  enchanted: 0
   animator: {fileID: 8612946366408489179}
 --- !u!1 &3991986730286277927
 GameObject:

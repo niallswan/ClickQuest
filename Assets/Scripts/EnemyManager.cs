@@ -10,6 +10,8 @@ public class EnemyManager : MonoBehaviour
 
     public static EnemyManager instance;
 
+    private GameObject enemyToSpawn;
+
     void Awake()
     {
         instance = this;
@@ -22,7 +24,15 @@ public class EnemyManager : MonoBehaviour
 
     public void CreateNewEnemy()
     {
-        GameObject enemyToSpawn = enemyPrefabs[Random.Range(0, enemyPrefabs.Length)];
+        var enchantRoll = Random.Range(1, 10);
+        Debug.Log(enchantRoll);
+
+        if(enchantRoll > 1){
+            enemyToSpawn = enemyPrefabs[Random.Range(0, enemyPrefabs.Length-1)];
+        }else{
+            enemyToSpawn = enemyPrefabs[3];
+        }
+
         GameObject obj = Instantiate(enemyToSpawn, canvas);
 
         currentEnemy = obj.GetComponent<Enemy>();
